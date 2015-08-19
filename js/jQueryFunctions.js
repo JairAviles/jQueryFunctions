@@ -266,7 +266,7 @@ function setUpDateRange(fechaIni, fechaFin) {
 			});
 }
 // Function for setting up a generic DatePicker textfield according to its id object as parameter
-function setUpFecha(objDestino){
+function setUpDate(objDestino){
 	$("#" + objDestino).datepicker(
 		{
            	duration:'fast',

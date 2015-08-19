@@ -28,7 +28,12 @@
              //Apply jButton funtcion to current button id 
              jButton($(this).attr('id'));
 
-         });         
+         });    
+
+         //setUpDate for singleDatePicker input
+         setUpDate('singleDatePicker'); 
+         //setUpDateRange for startDate and endDate
+         setUpDateRange('startDate','endDate'); 
 	});
 
 	function ok(){
@@ -58,7 +63,7 @@
 			<li>
 				<div class="card">
 					<h3>
-						jAlert example
+						jAlert
 					</h3>
 					<button type="button" id="btn_jAlert"
 			                 class="ui-button ui-state-default ui-corner-all ui-button-text-icon-primary" 
@@ -72,7 +77,7 @@
 			<li>
 				<div class="card">
 					<h3>
-						jError example
+						jError
 					</h3>
 					<button type="button" id="btn_jError"
 			                 class="ui-button ui-state-default ui-corner-all ui-button-text-icon-primary" 
@@ -86,7 +91,7 @@
 			<li>
 				<div class="card">
 					<h3>
-						jConfirm example
+						jConfirm
 					</h3>
 					<button type="button" id="btn_jConfirm"
 			                 class="ui-button ui-state-default ui-corner-all ui-button-text-icon-primary" 
@@ -100,7 +105,7 @@
 			<li>
 				<div class="card">
 					<h3>
-						jPrompt example
+						jPrompt
 					</h3>
 					<button type="button" id="btn_jPrompt"
 			                 class="ui-button ui-state-default ui-corner-all ui-button-text-icon-primary" 
@@ -114,7 +119,7 @@
 			<li>
 				<div class="card">
 					<h3>
-						jDialog example
+						jDialog
 					</h3>
 					<button type="button" id="btn_jDialog"
 			                 class="ui-button ui-state-default ui-corner-all ui-button-text-icon-primary" 
@@ -124,6 +129,26 @@
 			                <span class="ui-button-text">Click here</span>
 			        </button>
 				</div>
+			</li>
+			<li>
+				<div class="card">
+					<h3>
+						Single Date Picker
+					</h3>
+				</div>
+				<label for="singleDate">Single Date</label>
+				<input type="text" readonly="true" name="singleDate" id="singleDatePicker" />
+			</li>
+			<li>
+				<div class="card">
+					<h3>
+						Date Picker Range
+					</h3>
+				</div>
+				<label for="startDate">Start Date</label>
+				<input type="text" readonly="true" name="startDate"  id="startDate" /> <br />
+				<label for="endDate">End Date</label>
+				<input type="text" readonly="true" name="endDate"  id="endDate" />
 			</li>
 		</ul>
 	</div>
