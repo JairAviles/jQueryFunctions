@@ -163,18 +163,23 @@ function jConfirm(mensaje, okFunction, cancelFunction) {
  */
 function jPrompt(mensaje, textFunction) {
 	var contenedor = "prompts";
+	var contentMessage = "promptMessage";
 	var msg = '<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>' + mensaje + '</p>';
-	$("#" + contenedor).html(msg);
+	var prompt = '';
+	$("#" + contentMessage).html(msg);
 	$("#" + contenedor).dialog('option', 'buttons', {
 		"Cancelar" : function() {
 			$(this).dialog("close");
 		},
 		"Aceptar" : function() {
 			$(this).dialog("close");
+			prompt = $("#txtPrompt").val();
+			alert('Prompt: ' + prompt)
 			textFunction();
 		}
 	});
 	showMsg(contenedor, 600);
+	$("#txtPrompt").val('');
 }
 
 /*
@@ -183,7 +188,7 @@ function jPrompt(mensaje, textFunction) {
   @param mensaje - Any HTML format message
 
  */
-function jDialogo(mensaje) {
+function jDialogo(mensaje, textFunction) {
 	var contenedor = "mensajes";
 	var msg = mensaje;
 	$("#" + contenedor).html(msg);
@@ -217,11 +222,9 @@ function showMsg(contenedor, tamanio) {
 	if(tamanio!==0){
 		$("#" + contenedor).dialog('option', 'width', tamanio);
 	}
-	noScrollIE();
 
 	$("#" + contenedor).dialog('open');
 	$("#" + contenedor).dialog('moveToTop');
-	$("#" + contenedor).bind('dialogclose', function(event, ui) {scrollIE();});
 }
 
 /*
@@ -273,15 +276,4 @@ function setUpFecha(objDestino){
            	buttonImage: 'img/calendar.gif',
            	buttonImageOnly: true
 		});
-}
-// Clean HTML DIV
-function cleanDiv(campo){
-	$("#" + campo).html('');
-}
-
-//Show Dialog from its id object passed as parameter
-function showDialog(objDestino)
-{
-	$("#" + objDestino).dialog("open");	
-	return false;
 }
