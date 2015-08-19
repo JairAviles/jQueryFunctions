@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+html {
+    font-size: 120%;
+}
+
+body {
+    font-family: Arial, sans-serif, serif;
+    padding:0;
+    margin:0;
+}
+
+@media(max-width: 500px) {
+	h3 {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		font-weight:normal;
+		padding:10px 0 10px 0;
+		line-height:100%;
+	}
+}
+
+.card {
+    position: relative;
+    height: 25vh;
+    width:  12vw;
+    background-color: #eaeaea;
+    background-size: cover;
+    background-position:center;
+    text-shadow: 0 0 3px black;
+    color:#005fa9;
+    font-family: 'Trebuchet MS', cursive;
+    padding: 1.5em;
+    margin-bottom: .5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.main-header {
+	background-color: #00aecb;
+	text-align: center;
+	color: #FFB000;
+	padding: .4em;
+}
+
+.main-header h1 {
+    font-size: 26px;
+	font-weight: normal;
+	color: #FF1800;
+	text-shadow:1px 3px 2px #ccc;
+}
+
+.main-header h2 {
+        font-size: 1rem;
+        font-weight: normal;
+}
+
+.layout-principal
+{
+  position: absolute; 
+  top: 150px; 
+  right: 0; 
+  bottom: 0;  
+  overflow-x: auto;
+  width: 85%;
+  padding: 0.1% 6.5%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+   float   : left;
+   width   : 20%;
+   padding : 10px;
+}
