@@ -49,9 +49,69 @@ $(function(){
 <script>
 ```
 
+### Integration DIVs
+
+Please be sure of add the following divs tags at the bottom of your html boyd . Could it be below your footer tag
+
+```html 
+<div id="errores" style="display: none" title="jQuery Dialog" class="ui-state-active ui-corner-all"></div>
+<div id="confirms" style="display: none" title="jQuery Dialog" class="ui-state-active ui-corner-all"></div>
+<div id="mensajes" style="display: none" title="jQuery Dialog" class="ui-state-active ui-corner-all"> </div>
+<div id="alerts" style="display: none" title="jQuery Dialog" class="ui-state-active ui-corner-all"></div>
+<div id="prompts" style="display: none" title="jQuery Dialog" class="ui-state-active ui-corner-all">
+	<div id="promptMessage">
+	</div>
+   <div id="promptInput">
+    <label for="prompt">Prompt</label>
+	<input type="text" name="prompt" id="txtPrompt" class="ui-widget-content ui-corner-all" />	
+  </div>	
+</div>
+```
+For including a Single Date Picker, you need to invoke the setUpDate function on the document ready event or onload event from body tag.
+
+```html 
+<script>
+$(function(){
+   setupJQuery();
+   ...
+   //1. First form
+   setUpDate('singleDatePicker')
+});
+</script>
+...
+<!-- 2. Second form -->
+<body onload="setUpDate("singleDatePicker")">
+...
+<label for="singleDate">Single Date</label>
+<input type="text" readonly="true" name="singleDatePicker" id="singleDatePicker" />
+</body>
+```
+
+For including a Date Picker Range, you need to invoke the setUpDateRange function on the document ready event or onload event from body tag.
+
+```html 
+<script>
+$(function(){
+   setupJQuery();
+   ...
+   //1. First form
+   setUpDateRange('startDate','endDate');
+});
+</script>
+<!-- 2. Second form -->
+<body onload="setUpDateRange('startDate','endDate')">
+...
+<label for="startDate">Start Date</label>
+	<input type="text" readonly="true" name="startDate"  id="startDate" /> <br />
+<label for="endDate">End Date</label>
+	<input type="text" readonly="true" name="endDate"  id="endDate" />
+</body>
+```
+
 Readmes of the libraries used, can be found here:
 * [jQuery](http://jquery.com/). Version 1.7.2 is used in the current library.
 * [jQuery UI Dialog widget](https://jqueryui.com/dialog/). Version 1.7.3 is used in the current library.
+* [jQuery UI Datepicker widget](http://jqueryui.com/datepicker/)
 
 License
 ----

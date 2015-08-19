@@ -28,7 +28,7 @@ body {
     background-size: cover;
     background-position:center;
     text-shadow: 0 0 3px black;
-    color:#005fa9;
+    color:#565757;
     font-family: 'Trebuchet MS', cursive;
     padding: 1.5em;
     margin-bottom: .5em;
@@ -37,6 +37,8 @@ body {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+
 
 .main-header {
 	background-color: #00aecb;

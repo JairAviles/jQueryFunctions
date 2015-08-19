@@ -174,7 +174,7 @@ function jPrompt(mensaje, textFunction) {
 		"Aceptar" : function() {
 			$(this).dialog("close");
 			prompt = $("#txtPrompt").val();
-			alert('Prompt: ' + prompt)
+			alert('Prompt: ' + prompt);
 			textFunction();
 		}
 	});
